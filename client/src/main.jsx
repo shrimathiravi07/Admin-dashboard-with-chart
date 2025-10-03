@@ -1,4 +1,3 @@
-// client/src/main.jsx
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate, Link, Outlet } from "react-router-dom";
@@ -6,6 +5,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Users from "./pages/Users.jsx";
 import Reports from "./pages/Reports.jsx";
 import Notifications from "./pages/Notifications.jsx";
+import "./index.css";
 
 if (!localStorage.getItem("role")) localStorage.setItem("role", "admin");
 
@@ -23,7 +23,7 @@ function Layout() {
       </aside>
       <main className="main">
         <header className="top">
-          <div>Phase 3</div>
+          <div>Dashboard</div>
           <div className="muted">Role: {localStorage.getItem("role")}</div>
         </header>
         <div className="content">
