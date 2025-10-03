@@ -12,34 +12,26 @@ export function BarChartBox({ data }) {
       <div style={{ fontWeight: 600, marginBottom: 8 }}>Bar Chart</div>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
-          <XAxis dataKey="label" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+          <XAxis dataKey="label" /><YAxis /><Tooltip /><Legend />
           <Bar dataKey="value" fill="#4f46e5" />
         </BarChart>
       </ResponsiveContainer>
     </div>
   );
 }
-
 export function LineChartBox({ data }) {
   return (
     <div className="card" style={{ height: 320 }}>
       <div style={{ fontWeight: 600, marginBottom: 8 }}>Line Chart</div>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data}>
-          <XAxis dataKey="label" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+          <XAxis dataKey="label" /><YAxis /><Tooltip /><Legend />
           <Line dataKey="value" stroke="#22c55e" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 }
-
 export function PieChartBox({ data }) {
   return (
     <div className="card" style={{ height: 320 }}>
@@ -49,14 +41,12 @@ export function PieChartBox({ data }) {
           <Pie data={data} dataKey="value" nameKey="label" outerRadius={100}>
             {data.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
           </Pie>
-          <Tooltip />
-          <Legend />
+          <Tooltip /><Legend />
         </PieChart>
       </ResponsiveContainer>
     </div>
   );
 }
-
 export function DonutChartBox({ data }) {
   return (
     <div className="card" style={{ height: 320 }}>
@@ -66,8 +56,7 @@ export function DonutChartBox({ data }) {
           <Pie data={data} dataKey="value" nameKey="label" innerRadius={60} outerRadius={100}>
             {data.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
           </Pie>
-          <Tooltip />
-          <Legend />
+          <Tooltip /><Legend />
         </PieChart>
       </ResponsiveContainer>
     </div>
